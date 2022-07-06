@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply m-0 box-border p-0;
+  }
+  body {
+    @apply h-screen w-screen overflow-hidden bg-bgColor font-defaultText font-[400] leading-[1.5rem];
+  }
+  a {
+    @apply no-underline;
+  }
+  button,
+  input {
+    @apply outline-0;
+  }
+  ul {
+    @apply list-none;
+  }
+  img {
+    @apply max-w-full;
+  }
+  iframe {
+    @apply border-0;
+  }
+}
+@layer components {
+}
+
+@layer utilities {
+}

@@ -1,0 +1,155 @@
+import {
+  BsFillArrowLeftCircleFill,
+  BsFillArrowRightCircleFill
+} from "react-icons/bs";
+import flower from '../assets/blossom.png';
+import star from '../assets/icons8-collision-96.png';
+import leaf from '../assets/icons8-maple-leaf-96.png';
+import profile1 from '../assets/image1.jpg';
+import image11 from '../assets/image11_11_11.png';
+import image12 from '../assets/image12_12_12.png';
+import image2 from "../assets/image2_2_2.png";
+import profile2 from '../assets/image3.jpg';
+import profile3 from '../assets/image5.jpg';
+import image5 from "../assets/image5_5_5.png";
+import profile4 from '../assets/image7.jpg';
+import profile5 from '../assets/image9.jpg';
+import image9 from "../assets/image9_9_9.png";
+
+const Home = () => {
+    const images=[image5,image2,image9,image11,image12]
+    const avatars=[profile1,profile2,profile3,profile4,profile5]
+  return (
+    <>
+      <section className="relative mx-auto my-8 flex w-[90%] flex-col items-center justify-start ">
+        {/* -------title-------------- */}
+        <div className="text-center ">
+          <h1 className="text-4xl  font-[500] leading-[2.8rem] md:text-7xl">
+            Confuse Your Mirror By <br /> Our Trendy Outfits!
+          </h1>
+        </div>
+        {/* -----------title end ---------*/}
+        {/* ---------leaf start---------- */}
+        <div className="absolute h-[3.5rem] w-[3.5rem] right-2 top-[3.5rem]">
+            <img src={leaf}/>
+
+        </div>
+        {/* -----leaf end------- */}
+        {/* ---------sunflower start---------- */}
+        <div className="absolute h-[4rem] w-[4rem] right-1 top-[10rem]">
+            <img src={star}/>
+
+        </div>
+        {/* -----sunflower end------- */}
+        {/* ---------sunflower start---------- */}
+        <div className="absolute h-[4rem] w-[4rem] left-2 top-[4rem]">
+            <img src={flower}/>
+
+        </div>
+        {/* -----sunflower end------- */}
+
+        {/* filter start */}
+        <div className="absolute left-2 top-[9rem]">
+            <ul>
+                <li className="font-[500] text-xl">Men</li>
+                <li>Women</li>
+                <li>Children</li>
+            </ul>
+        </div>
+
+        {/* filter end */}
+        {/* -------imagebox----- */}
+
+        <div className="mt-[5.2rem] flex items-center justify-between ">
+        <BsFillArrowLeftCircleFill size={40} className="text-purpleColor ml-5  cursor-pointer duration-[0.5s] hover:scale-[120%]"/>
+          <div className="hidden md:block relative h-[250px] w-[250px] bg-purpleColor rounded-3xl  mt-4 border-t-[125px] border-t-transparent border-r-[300px] border-r-orangeColor border-b-[150px] border-b-transparent" >
+            <div className="absolute bottom-[1.5rem] -left-[3.5rem] h-[338px] w-[350px]">
+              <img src={image5} alt="" className="" /> 
+            </div>
+          </div>
+          <div className="relative h-[250px] w-[300px] rounded-3xl bg-purpleColor mt-4" >
+            <div className="absolute bottom-[1.5rem] -left-[3.5rem] h-[338px] w-[350px]">
+              <img src={image5} alt="" className="" />
+            </div>
+          </div>
+          <div className="hidden md:block relative h-[250px] w-[300px] rounded-3xl bg-purpleColor mt-4" >
+            <div className="absolute bottom-[1.5rem] -left-[3.5rem] h-[338px] w-[350px]">
+              <img src={image5} alt="" className="" />
+            </div>
+          </div>
+          <BsFillArrowRightCircleFill size={40} className="text-purpleColor mr-5 cursor-pointer duration-[0.5s] hover:scale-[120%]"/>
+          
+        </div> 
+          {/* -----imagebox end -------*/}
+        {/* all the avatars profile */}
+       
+        <div className="flex absolute top-[27.2rem] -right-[0.2rem]">
+          {/* sinfle avatar */}
+          <div className="h-10 w-10 object-cover rounded-lg bg-profile bg-no-repeat z-[6] flex items-center justify-center">
+            <p className="text-whiteColor">+5k </p>
+          </div>
+          <div className="-ml-4 -mt-1 z-[5]">
+            <img src={profile1} alt="" className="h-10 w-10 object-cover rounded-lg shadow-[ 0_0_0_4px_#000]" />
+          </div>
+          {/* sinfle avatar */}
+          <div className="-ml-4 -mt-2 z-[4]">
+            <img src={profile2} alt="" className="h-10 w-10 object-cover rounded-lg shadow-[ 0_0_0_4px_#000]" />
+          </div>
+          {/* sinfle avatar */}
+          <div className="-ml-4 -mt-3 z-[3]">
+            <img src={profile3} alt="" className="h-10 w-10 object-cover rounded-lg shadow-[ 0_0_0_4px_#000]" />
+          </div>
+          {/* sinfle avatar */}
+          <div className="-ml-[8px] -mt-[4px] z-[2] hidden">
+            <img src={profile1} alt="" className="h-10 w-10 object-cover rounded-lg shadow-[ 0_0_0_4px_#000]" />
+          </div>
+          {/* sinfle avatar */}
+          <div className="-ml-[8px] -mt-[4px] z-[1] hidden">
+            <img src={profile1} alt="" className="h-10 w-10 object-cover rounded-lg shadow-[ 0_0_0_4px_#000]" />
+          </div>
+
+        
+        </div>
+         
+          
+
+
+
+
+
+
+
+        
+      </section>
+    </>
+  );
+};
+
+export default Home;
+
+
+
+
+<div className="hidden md:block relative h-[200px] w-[200px] mr-3 lg:h-[250px] lg:w-[250px] lg:mr-10" >
+            <img src={shape2} className=' h-full w-full object-cover' alt=""/>
+            <div className="absolute bottom-[5.2rem] right-[0.1rem] h-[220px] w-[220px] lg:h-[280px] lg:w-[280px] lg:bottom-[6.5rem] ">
+              {/* <img src={image11} alt="" className="" /> */}
+            </div>
+
+ <div className="h-[200px] w-[200px]  sm:h-[250px] sm:w-[250px] md:h-[200px] md:w-[200px] lg:h-[250px] lg:w-[250px] rounded-3xl bg-purpleColor mt-2" >
+            <div className="absolute bottom-[1.5rem] -left-[0.1rem] h-[288px] w-[300px] sm:h-[338px] sm:w-[350px] sm:left-[2rem] md:h-[280px] md:w-[280px] md:left-[14.5rem] md:bottom-[0.5rem] lg:h-[350px] lg:w-[350px] lg:left-[19rem] lg:bottom-[0.5rem] ">
+              <img src={image2} alt="" className="" />
+            </div>
+
+<div className="hidden md:block relative h-[200px] w-[200px] lg:h-[250px] lg:w-[250px]  ml-3 lg:ml-10" >
+            
+            <div className="absolute bottom-[1rem] -right-[0.3rem] h-[250px] w-[250px] lg:h-[340px] lg:w-[340px] lg:-right-[23px] lg:bottom-[0.8rem]">
+              {/* <img src={image2} alt="" className="" /> */}
+            </div>
+
+
+
+
+
+
+

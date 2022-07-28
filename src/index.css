@@ -7,7 +7,7 @@
     @apply m-0 box-border p-0;
   }
   body {
-    @apply h-screen w-screen overflow-hidden bg-bgColor font-defaultText font-[400] leading-[1.5rem];
+    @apply mx-auto h-screen max-w-[1440px] overflow-x-hidden bg-bgColor font-defaultText font-[400] leading-[1.5rem];
   }
   a {
     @apply no-underline;
@@ -20,7 +20,7 @@
     @apply list-none;
   }
   img {
-    @apply max-w-full;
+    @apply block max-w-full;
   }
   iframe {
     @apply border-0;

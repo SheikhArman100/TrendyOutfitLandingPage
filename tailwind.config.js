@@ -19,6 +19,10 @@ module.exports = {
       },
       fontFamily:{
         defaultText:['Cormorant Garamond','serif']
+      },
+      backgroundImage: {
+        'profile': "url('/src/assets/image12.jpg')",
+        
       }
       
     },

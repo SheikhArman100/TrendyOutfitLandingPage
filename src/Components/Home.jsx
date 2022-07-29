@@ -30,6 +30,7 @@ const Home = () => {
   const leftImages = [image3, image11, image7];
   const rightImages = [image2, image6, image9];
   const [number, setNumber] = useState(0);
+  const gender=['Male','Female','Child']
   const nextImage = () => {
     number === 2 ? setNumber(0) : setNumber((prev) => prev + 1);
   };
@@ -113,9 +114,9 @@ const rightImage={
         {/* filter start */}
         <motion.div className="absolute left-1 top-[8rem]" initial={{scale:0}} animate={{scale:1 ,transition:{duration:2.4}}}>
           <ul>
-            <li className="text-xl font-[500]">Men</li>
-            <li>Women</li>
-            <li>Children</li>
+            {gender.map((value,index)=>(
+              <li className={index===number?"text-2xl text-orangeColor font-[600]":"text-gray-500"}>{value}</li>
+            ))}
           </ul>
         </motion.div>
 
@@ -131,18 +132,25 @@ const rightImage={
             />
           </motion.button>
           <motion.div className="relative mr-3 hidden h-[270px] w-[210px] md:block lg:mr-7 lg:h-[330px] lg:w-[250px]  xl:h-[400px] xl:w-[310px]" variants={leftImage} initial='hidden' animate="show">
-            <img
-              src={leftImages[number]}
+            {leftImages.map((value,index)=>(
+              <img
+              src={value}
               alt=""
-              className="h-full w-full object-cover"
+              className={index===number?"h-full w-full object-cover ease-out duration-[0.5s] scale-100":"hidden ease-in duration-[0.5s] scale-0"}
             />
+
+            ))}
+            
           </motion.div>
           <motion.div className="relative mb-3 h-[260px]  w-[200px] sm:h-[350px] sm:w-[270px] md:h-[270px] md:w-[210px] lg:h-[330px] lg:w-[250px] xl:h-[400px] xl:w-[320px]" variants={middleImage} initial='hidden' animate="show">
-            <img
-              src={middleImages[number]}
+          {middleImages.map((value,index)=>(
+              <img
+              src={value}
               alt=""
-              className="h-full w-full object-cover"
+              className={index===number?"h-full w-full object-cover scale-100":"hidden scale-0"}
             />
+
+            ))}
             {/* center button */}
             <div className="absolute top-[13rem] left-[3rem] h-[100px] w-[100px] cursor-pointer duration-500 hover:scale-110 sm:top-[18rem] sm:left-[5rem] md:top-[13.5rem] md:left-[3rem] md:h-[120px] md:w-[120px] lg:top-[15.5rem] lg:left-[3.5rem] lg:h-[140px] lg:w-[140px] xl:top-[19.5rem]   xl:left-[5rem] xl:h-[170px] xl:w-[170px]">
               <img src={centerImage} alt="" className="object-cover" />
